@@ -3,6 +3,7 @@
 from chesstools import Board, Move, List
 from chesstools.piece import PIECE_TO_LETTER
 import sys
+import copy
 
 class Slide(object):
     def __init__(self):
@@ -43,18 +44,19 @@ class Slide(object):
     def do_move(self, color, index):
         self.board.turn = color
         if color == "white":
-            print self.white[index]
+#            print self.white[index]
             if self.white[index][2] == "" or self.white[index][2] == "+":
                 self.white[index][2] = None
             if not self.move(self.white[index][0], self.white[index][1], self.white[index][2]):
-                print self.white[index]
+                #print ("white error at " + str(index))
+                print "error: " + index + " " + self.white[index]
                 raise
         else:
-            print self.black[index]
+#            print self.black[index]
             if self.black[index][2] == "" or self.black[index][2] == "+":
                 self.black[index][2] = None
             if not self.move(self.black[index][0], self.black[index][1]):
-                print self.black[index]
+                #print "error " + index + " " + self.black[index]
                 raise
 
     def read_pgn(self, filename):
@@ -84,23 +86,24 @@ class Slide(object):
         # if success, return number of moves played
         # if it fails, try playing one move fewer
         
-        save_board = self.board
-        save_moves = self.moves
+        save_board = copy.deepcopy(self.board)
+        save_moves = copy.deepcopy(self.moves)
 
         try:
             for m in range(this_move, last_move):
-                print "white"
+                #print "white"
                 self.do_move("white", m)
             white_output = "\n" + self.get_fen() + "\n" + self.get_board()
             for m in range(this_move, last_move):
-                print "black"
+                #print "black"
                 self.do_move("black", m)
             self.output += white_output + "\n" + self.get_fen() + "\n" + self.get_board()
             return last_move - this_move
         except:
-            print "CRAAAP"
+            #print "Could not move to " + str(last_move)
             self.board = save_board
             self.moves = save_moves
+            #self.render()
             if last_move > this_move + 1:
                 return self.cluster_moves(this_move, last_move-1)
             else:
@@ -109,16 +112,18 @@ class Slide(object):
 if __name__ == "__main__":
     slide = Slide()
     slide.read_pgn("null")
-    print len(slide.white)
-    print len(slide.black)
+    print str(len(slide.white)) + " white moves"
+    print str(len(slide.black)) + " black moves"
     
     last_move = len(slide.black)-1
     this_move = 0
 
     while this_move <= last_move:
-        moves = slide.cluster_moves(this_move, this_move+1)
+        moves = slide.cluster_moves(this_move, last_move)
         this_move += moves
         print "MOVED: " + str(moves) + " times"
         if moves < 1:
-            print "ERROR! Illegal moves!"
-    print slide.output
+            print "Done."
+            print slide.output
+            sys.exit(1)
+
