@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cat game1.pgn | ../slide.py | diff -u - game1.out
+status=$?
+if [ "$status" = "0" ]; then
+	echo Test passed
+else
+	echo Test failed
+fi
+

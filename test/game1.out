@@ -1,0 +1,366 @@
+install psyco to make your bot run much faster!
+83 white moves
+82 black moves
+MOVED: 10 times
+MOVED: 1 times
+MOVED: 2 times
+MOVED: 5 times
+MOVED: 4 times
+MOVED: 2 times
+MOVED: 3 times
+MOVED: 2 times
+MOVED: 7 times
+MOVED: 6 times
+MOVED: 8 times
+MOVED: 12 times
+MOVED: 1 times
+MOVED: 7 times
+MOVED: 3 times
+MOVED: 4 times
+MOVED: 3 times
+MOVED: 1 times
+MOVED: 0 times
+Done.
+
+rnbqkbnr/pppppppp/8/3P/2P1P/2N2NPP/PP3PB/R1BQ1RK b kq - 0 1
+r n b q k b n r
+p p p p p p p p
+. . . . . . . .
+. . . P . . . .
+. . P . P . . .
+. . N . . N P P
+P P . . . P B .
+R . B Q . R K .
+r2q1rk/1ppb1pbp/p2p1np/3Pp/2PnP/2N2NPP/PP3PB/R1BQ1RK w - - 1 11
+r . . q . r k .
+. p p b . p b p
+p . . p . n p .
+. . . P p . . .
+. . P n P . . .
+. . N . . N P P
+P P . . . P B .
+R . B Q . R K .
+r2q1rk/1ppb1pbp/p2p1np/3Pp/2PNP/2N3PP/PP3PB/R1BQ1RK b - - 0 11
+r . . q . r k .
+. p p b . p b p
+p . . p . n p .
+. . . P p . . .
+. . P N P . . .
+. . N . . . P P
+P P . . . P B .
+R . B Q . R K .
+r2q1rk/1ppb1pbp/p2p1np/3P/2PpP/2N3PP/PP3PB/R1BQ1RK w - - 0 12
+r . . q . r k .
+. p p b . p b p
+p . . p . n p .
+. . . P . . . .
+. . P p P . . .
+. . N . . . P P
+P P . . . P B .
+R . B Q . R K .
+r2q1rk/1ppb1pbp/p2p1np/3P/2PQP2P/2N3P/PP3PB/R1B2RK b - - 0 12
+r . . q . r k .
+. p p b . p b p
+p . . p . n p .
+. . . P . . . .
+. . P Q P . . P
+. . N . . . P .
+P P . . . P B .
+R . B . . R K .
+r1q2rk/2pb1pbp/p2p1np/1p1P/2PQP2P/2N3P/PP3PB/R1B2RK w - b6 0 14
+r . q . . r k .
+. . p b . p b p
+p . . p . n p .
+. p . P . . . .
+. . P Q P . . P
+. . N . . . P .
+P P . . . P B .
+R . B . . R K .
+r1q2rk/2pb1pbp/p2p1np/1P1P/1Q2PB1P/2N3PB/PP3P/2R2RK b - - 4 14
+r . q . . r k .
+. . p b . p b p
+p . . p . n p .
+. P . P . . . .
+. Q . . P B . P
+. . N . . . P B
+P P . . . P . .
+. . R . . R K .
+r3r1k/2pb1pbp/1q1p2p/1p1P/1Q2PBnP/2N3PB/PP3P/2R2RK w - - 4 19
+r . . . r . k .
+. . p b . p b p
+. q . p . . p .
+. p . P . . . .
+. Q . . P B n P
+. . N . . . P B
+P P . . . P . .
+. . R . . R K .
+r3r1k/2pb1pbp/1Q1p2p/3P/4PBBP/1PN3P/P4P/2R2RK b - - 0 19
+r . . . r . k .
+. . p b . p b p
+. Q . p . . p .
+. . . P . . . .
+. . . . P B B P
+. P N . . . P .
+P . . . . P . .
+. . R . . R K .
+r5k/5pbp/1r1p2p/2pP/4PBbP/1PN3P/P4P/2R2RK w - c6 0 23
+r . . . . . k .
+. . . . . p b p
+. r . p . . p .
+. . p P . . . .
+. . . . P B b P
+. P N . . . P .
+P . . . . P . .
+. . R . . R K .
+r5k/5pbp/1rPp2p/3N/4PBbP/1P4P/P4P/2R2RK b - - 1 23
+r . . . . . k .
+. . . . . p b p
+. r P p . . p .
+. . . N . . . .
+. . . . P B b P
+. P . . . . P .
+P . . . . P . .
+. . R . . R K .
+r5k/5pbp/3p2p/3N/4PBbP/1P4P/P4P/2r2RK w - - 0 25
+r . . . . . k .
+. . . . . p b p
+. . . p . . p .
+. . . N . . . .
+. . . . P B b P
+. P . . . . P .
+P . . . . P . .
+. . r . . R K .
+r5k/5pbp/3p2p/3N/4P1bP/1P2B1P/P4PK/2R b - - 2 25
+r . . . . . k .
+. . . . . p b p
+. . . p . . p .
+. . . N . . . .
+. . . . P . b P
+. P . . B . P .
+P . . . . P K .
+. . R . . . . .
+6k/5p1p/3p2p/3N/4P1bP/1P2b1P/r4PK/2R w - - 0 28
+. . . . . . k .
+. . . . . p . p
+. . . p . . p .
+. . . N . . . .
+. . . . P . b P
+. P . . b . P .
+r . . . . P K .
+. . R . . . . .
+6k/5p1p/3p2p/8/4P1bP/1P2N1P/r4PK/1R b - - 1 28
+. . . . . . k .
+. . . . . p . p
+. . . p . . p .
+. . . . . . . .
+. . . . P . b P
+. P . . N . P .
+r . . . . P K .
+. R . . . . . .
+6k/3b1p1p/3p2p/8/4P2P/1P2N1P/r4PK/1R w - - 3 30
+. . . . . . k .
+. . . b . p . p
+. . . p . . p .
+. . . . . . . .
+. . . . P . . P
+. P . . N . P .
+r . . . . P K .
+. R . . . . . .
+6k/3b1p1p/1R4p/6P/1P2P2P/4N1K/r4P/8 b - - 0 30
+. . . . . . k .
+. . . b . p . p
+. R . . . . p .
+. . . . . . P .
+. P . . P . . P
+. . . . N . K .
+r . . . . P . .
+. . . . . . . .
+8/5pk/1R4p/6p/1P2b2P/4N1K/1r3P/8 w - - 0 37
+. . . . . . . .
+. . . . . p k .
+. R . . . . p .
+. . . . . . p .
+. P . . b . . P
+. . . . N . K .
+. r . . . P . .
+. . . . . . . .
+8/5pk/1R4p/1P4P/3Kb/4NP/1r/8 b - - 0 37
+. . . . . . . .
+. . . . . p k .
+. R . . . . p .
+. P . . . . P .
+. . . K b . . .
+. . . . N P . .
+. r . . . . . .
+. . . . . . . .
+4k/5p/1R4p/1P4P/3K/4NP/5r/1b w - - 6 43
+. . . . k . . .
+. . . . . p . .
+. R . . . . p .
+. P . . . . P .
+. . . K . . . .
+. . . . N P . .
+. . . . . r . .
+. b . . . . . .
+4k/8/6p/1PK3P/2N2R/5P/5r/1b b - - 1 43
+. . . . k . . .
+. . . . . . . .
+. . . . . . p .
+. P K . . . P .
+. . N . . R . .
+. . . . . P . .
+. . . . . r . .
+. b . . . . . .
+8/8/4k1p/1PK3r/2N2R/5P/b/8 w - - 0 51
+. . . . . . . .
+. . . . . . . .
+. . . . k . p .
+. P K . . . r .
+. . N . . R . .
+. . . . . P . .
+b . . . . . . .
+. . . . . . . .
+8/2K/1PN1k1p/6r/8/R4P/b/8 b - - 8 51
+. . . . . . . .
+. . K . . . . .
+. P N . k . p .
+. . . . . . r .
+. . . . . . . .
+R . . . . P . .
+b . . . . . . .
+. . . . . . . .
+8/2K2r/bPN3pk/8/8/R4P/8/8 w - - 20 63
+. . . . . . . .
+. . K . . r . .
+b P N . . . p k
+. . . . . . . .
+. . . . . . . .
+R . . . . P . .
+. . . . . . . .
+. . . . . . . .
+8/5r/bPNK2pk/8/8/R4P/8/8 b - - 21 63
+. . . . . . . .
+. . . . . r . .
+b P N K . . p k
+. . . . . . . .
+. . . . . . . .
+R . . . . P . .
+. . . . . . . .
+. . . . . . . .
+8/8/bPNK1rpk/8/8/R4P/8/8 w - - 22 64
+. . . . . . . .
+. . . . . . . .
+b P N K . r p k
+. . . . . . . .
+. . . . . . . .
+R . . . . P . .
+. . . . . . . .
+. . . . . . . .
+1Q/3K/R1N2rpk/8/8/5P/8/8 b - - 0 64
+. Q . . . . . .
+. . . K . . . .
+R . N . . r p k
+. . . . . . . .
+. . . . . . . .
+. . . . . P . .
+. . . . . . . .
+. . . . . . . .
+1Q/3K3k/6p/r/8/5P/8/8 w - - 1 71
+. Q . . . . . .
+. . . K . . . k
+. . . . . . p .
+r . . . . . . .
+. . . . . . . .
+. . . . . P . .
+. . . . . . . .
+. . . . . . . .
+8/7k/4K1p/r/6Q/5P/8/8 b - - 4 71
+. . . . . . . .
+. . . . . . . k
+. . . . K . p .
+r . . . . . . .
+. . . . . . Q .
+. . . . . P . .
+. . . . . . . .
+. . . . . . . .
+8/6k/4Krp/8/6Q/5P/8/8 w - - 7 74
+. . . . . . . .
+. . . . . . k .
+. . . . K r p .
+. . . . . . . .
+. . . . . . Q .
+. . . . . P . .
+. . . . . . . .
+. . . . . . . .
+2Q/6k/5rp/8/8/4KP/8/8 b - - 11 74
+. . Q . . . . .
+. . . . . . k .
+. . . . . r p .
+. . . . . . . .
+. . . . . . . .
+. . . . K P . .
+. . . . . . . .
+. . . . . . . .
+2Q2r/6k/6p/8/8/4KP/8/8 w - - 15 78
+. . Q . . r . .
+. . . . . . k .
+. . . . . . p .
+. . . . . . . .
+. . . . . . . .
+. . . . K P . .
+. . . . . . . .
+. . . . . . . .
+5r/6k/6p/8/8/2Q2PK/8/8 b - - 18 78
+. . . . . r . .
+. . . . . . k .
+. . . . . . p .
+. . . . . . . .
+. . . . . . . .
+. . Q . . P K .
+. . . . . . . .
+. . . . . . . .
+8/7k/6p/6r/8/2Q2PK/8/8 w - - 21 81
+. . . . . . . .
+. . . . . . . k
+. . . . . . p .
+. . . . . . r .
+. . . . . . . .
+. . Q . . P K .
+. . . . . . . .
+. . . . . . . .
+8/7k/6p/6r/5K/2Q2P/8/8 b - - 22 81
+. . . . . . . .
+. . . . . . . k
+. . . . . . p .
+. . . . . . r .
+. . . . . K . .
+. . Q . . P . .
+. . . . . . . .
+. . . . . . . .
+8/7k/6p/5r/5K/2Q2P/8/8 w - - 23 82
+. . . . . . . .
+. . . . . . . k
+. . . . . . p .
+. . . . . r . .
+. . . . . K . .
+. . Q . . P . .
+. . . . . . . .
+. . . . . . . .
+8/7k/6p/5r/5K/2Q2P/8/8 w - - 23 82
+. . . . . . . .
+. . . . . . . k
+. . . . . . p .
+. . . . . r . .
+. . . . . K . .
+. . Q . . P . .
+. . . . . . . .
+. . . . . . . .
+8/7k/6p/5r/5K/2Q2P/8/8 w - - 23 82
+. . . . . . . .
+. . . . . . . k
+. . . . . . p .
+. . . . . r . .
+. . . . . K . .
+. . Q . . P . .
+. . . . . . . .
+. . . . . . . .
