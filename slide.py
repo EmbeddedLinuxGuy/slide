@@ -4,6 +4,7 @@ from chesstools import Board, Move, List
 from chesstools.piece import PIECE_TO_LETTER
 import sys
 import copy
+from renderer import Renderer
 
 class Slide(object):
     def __init__(self):
@@ -13,6 +14,8 @@ class Slide(object):
         self.white = []
         self.black = []
         self.output = ""
+        self.total_moves = []
+        self.renderer = Renderer()
 
     def move(self, start, end, promotion=None):
         m = Move(start, end, promotion)
@@ -90,14 +93,21 @@ class Slide(object):
         save_moves = copy.deepcopy(self.moves)
 
         try:
+            white_output = ""
+            these_moves = []
             for m in range(this_move, last_move):
                 #print "white"
                 self.do_move("white", m)
-            white_output = "\n" + self.get_fen() + "\n" + self.get_board()
+#                self.turn.color = "white" # for get_fen() always assume white move
+                white_output += self.get_fen() + "\n"
+                these_moves.append(self.get_fen())
             for m in range(this_move, last_move):
                 #print "black"
                 self.do_move("black", m)
-            self.output += white_output + "\n" + self.get_fen() + "\n" + self.get_board()
+                white_output += self.get_fen() + "\n"
+                these_moves.append(self.get_fen())
+            self.output += white_output
+            self.total_moves.append(these_moves)
             return last_move - this_move
         except:
             #print "Could not move to " + str(last_move)
@@ -108,6 +118,14 @@ class Slide(object):
                 return self.cluster_moves(this_move, last_move-1)
             else:
                 return 0
+
+    def make_animation(self):
+        i = 0
+        for fen_list in self.total_moves:
+            for fen in fen_list:
+                surface = self.renderer.render(fen)
+                surface.write_to_png('img/{num:05d}.png'.format(num=i))
+                i += 1
 
 if __name__ == "__main__":
     slide = Slide()
@@ -124,6 +142,7 @@ if __name__ == "__main__":
         print "MOVED: " + str(moves) + " times"
         if moves < 1:
             print "Done."
-            print slide.output
+            slide.make_animation()
+            print slide.total_moves
             sys.exit(1)
 
