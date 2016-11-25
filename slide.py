@@ -14,7 +14,7 @@ class Slide(object):
         self.white = []
         self.black = []
         self.output = ""
-        self.total_moves = []
+        self.total_moves = [[self.get_fen()]]
         self.renderer = Renderer()
 
     def move(self, start, end, promotion=None):
@@ -52,7 +52,8 @@ class Slide(object):
                 self.white[index][2] = None
             if not self.move(self.white[index][0], self.white[index][1], self.white[index][2]):
                 #print ("white error at " + str(index))
-                print "error: " + index + " " + self.white[index]
+                #print "error: " + str(index) + " "
+                #print self.white[index]
                 raise
         else:
 #            print self.black[index]
@@ -98,7 +99,7 @@ class Slide(object):
             for m in range(this_move, last_move):
                 #print "white"
                 self.do_move("white", m)
-#                self.turn.color = "white" # for get_fen() always assume white move
+                self.board.turn = "white" # for get_fen() always assume white move
                 white_output += self.get_fen() + "\n"
                 these_moves.append(self.get_fen())
             for m in range(this_move, last_move):
@@ -130,19 +131,36 @@ class Slide(object):
 if __name__ == "__main__":
     slide = Slide()
     slide.read_pgn("null")
-    print str(len(slide.white)) + " white moves"
-    print str(len(slide.black)) + " black moves"
+    #print str(len(slide.white)) + " white moves"
+    #print str(len(slide.black)) + " black moves"
     
-    last_move = len(slide.black)-1
+    last_move = len(slide.black)
     this_move = 0
 
     while this_move <= last_move:
         moves = slide.cluster_moves(this_move, last_move)
+        if moves > 1:
+            print 'Moves {first}-{last} ({moves} moves)'.format(first=1+this_move, last=this_move+moves, moves=moves)
+        elif moves == 1:
+            print 'Move  {first}: {orig}-{end} {borig}-{bend}'.format(first=1+this_move, orig=slide.white[this_move][0], end=slide.white[this_move][1], borig=slide.black[this_move][0], bend=slide.black[this_move][1])
+            #print slide.get_board()
+        else:
+            #print "COULD NOT MOVE!!!"
+            pass
         this_move += moves
-        print "MOVED: " + str(moves) + " times"
         if moves < 1:
-            print "Done."
+            #print "Done."
+            if len(slide.white) > len(slide.black):
+                last_i = len(slide.white)-1
+                #print "Last index: " + str(last_i)
+                print "Last half move: {begin}-{end}".format(begin=slide.white[last_i][0], end=slide.white[last_i][1])
+                slide.do_move("white", last_i)
+                slide.board.turn = "white"
+                fen = slide.get_fen()
+                #print "[Fen: {fen}]".format(fen=fen)
+                #fen.split()[1].lower() == 'b'
+                slide.total_moves.append([fen])
+#            print slide.total_moves
             slide.make_animation()
-            print slide.total_moves
             sys.exit(1)
 
