@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -x
+set -e
+
+mkdir -p proc-pgn html
+
+# populate this directory with round1.pgn-roundNN.pgn
+
+for f in orig-pgn/*.pgn
+do
+    ./preproc $f
+    n=${f#orig-pgn/round}
+    n=${n%.pgn}
+    echo $n
+    
+    rm -f img/*.png
+    cp frag/top.html html/round-$n.html
+    echo '<img src="round-'$n'.gif" />' >> html/round-$n.html
+    cat frag/mid.html >> html/round-$n.html
+    set +e
+    cat proc-pgn/round$n-proc.pgn | ./slide.py |tail -n +2 >> html/round-$n.html
+    set -e
+    convert -delay 75 img/*.png html/round-$n.gif
+    cat frag/end.html >> html/round-$n.html
+done

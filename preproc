@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -x
+file=$1
+tmp=$file.no-clock
+final=proc-pgn/$(basename ${file%.pgn})-proc.pgn
+
+PE=../pgn-extract/pgn-extract
+perl -ane 's/\[%clk.*?\]//g;print' $file > $tmp
+$PE --nocomments -Wlalg --linelength 5 $tmp > $final
+rm $tmp
+
